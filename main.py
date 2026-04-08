@@ -39,18 +39,22 @@ def is_injective(mapping: dict) -> bool:
 print(is_injective(f))
     # === END TODO ===
 
+f= {1:'a',2:'b'}
+target = {'a','b','c'}
+def is_surjective(mapping: dict, target: set) -> bool:
+    """Return True if f is onto (range == target)."""
+    # === TODO ===
+    return set(mapping.values()) == target
+    pass
+print(is_surjective(f, target))
+    # === END TODO ===
 
-# def is_surjective(mapping: dict, target: set) -> bool:
-#     """Return True if f is onto (range == target)."""
-#     # === TODO ===
-#     # Your code here
-#     pass
-#     # === END TODO ===
-
-
-# def is_bijective(mapping: dict, target: set) -> bool:
-#     """Return True if f is both injective and surjective."""
-#     # === TODO ===
-#     # Your code here
-#     pass
-#     # === END TODO ===
+f = {1:'a',2:'b',3:'c'}
+target = {'a','b','c'}
+def is_bijective(mapping: dict, target: set) -> bool:
+    """Return True if f is both injective and surjective."""
+    # === TODO ===
+    return len(mapping.values()) == len(set(mapping.values())) and set(mapping.values()) == target
+    pass
+print(is_bijective(f, target))
+    # === END TODO ===
