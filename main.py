@@ -30,13 +30,14 @@ def is_well_defined(mapping: dict, target: set) -> bool:
 print(is_well_defined({1:'a',2:'z'},{'a','b','c'}))
     # === END TODO ===
 
-
-# def is_injective(mapping: dict) -> bool:
-#     """Return True if f is one-to-one (no two inputs map to same output)."""
-#     # === TODO ===
-#     # Your code here
-#     pass
-#     # === END TODO ===
+f = ({1:'a',2:'b',3:'a'})
+def is_injective(mapping: dict) -> bool:
+    """Return True if f is one-to-one (no two inputs map to same output)."""
+    # === TODO ===
+    return len(mapping.values()) == len(set(mapping.values()))
+    pass
+print(is_injective(f))
+    # === END TODO ===
 
 
 # def is_surjective(mapping: dict, target: set) -> bool:
