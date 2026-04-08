@@ -16,18 +16,19 @@ print(get_domain(f))
 def get_range(mapping: dict) -> set:
     """Return the range — the set of outputs actually mapped to."""
     # === TODO ===
-    return set(mapping.values())
+    return sorted(mapping.values())
     pass
 print(get_range(f))
     # === END TODO ===
 
-
-# def is_well_defined(mapping: dict, target: set) -> bool:
-#     """Return True if every output value is in the target set."""
-#     # === TODO ===
-#     # Your code here
-#     pass
-#     # === END TODO ===
+({1:'a',2:'z'}, {'a','b','c'})
+def is_well_defined(mapping: dict, target: set) -> bool:
+    """Return True if every output value is in the target set."""
+    # === TODO ===
+    return set(mapping.items()).issubset(target)
+    pass
+print(is_well_defined({1:'a',2:'z'},{'a','b','c'}))
+    # === END TODO ===
 
 
 # def is_injective(mapping: dict) -> bool:
