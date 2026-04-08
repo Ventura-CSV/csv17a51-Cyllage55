@@ -1,23 +1,25 @@
 from __future__ import annotations
 
-
+f = {1: 'a', 2: 'b', 3: 'c'}
 def get_domain(mapping: dict) -> set:
     """Return the domain X (all inputs of the function)."""
     # === TODO ===\
-    f = {1: 'a', 2: 'b', 3: 'c'}
-    print(get_domain(f))
+    pass
     return set(mapping.keys())
 
+
+print(get_domain(f))
 
     # === END TODO ===
 
 
-# def get_range(mapping: dict) -> set:
-#     """Return the range — the set of outputs actually mapped to."""
-#     # === TODO ===
-#     # Your code here
-#     pass
-#     # === END TODO ===
+def get_range(mapping: dict) -> set:
+    """Return the range — the set of outputs actually mapped to."""
+    # === TODO ===
+    return set(mapping.values())
+    pass
+print(get_range(f))
+    # === END TODO ===
 
 
 # def is_well_defined(mapping: dict, target: set) -> bool:
