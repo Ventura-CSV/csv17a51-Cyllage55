@@ -7,7 +7,6 @@ def get_domain(mapping: dict) -> set:
     pass
     return set(mapping.keys())
 
-
 print(get_domain(f))
 
     # === END TODO ===
@@ -16,7 +15,7 @@ print(get_domain(f))
 def get_range(mapping: dict) -> set:
     """Return the range — the set of outputs actually mapped to."""
     # === TODO ===
-    return sorted(mapping.values())
+    return set(mapping.values())
     pass
 print(get_range(f))
     # === END TODO ===
@@ -25,7 +24,7 @@ print(get_range(f))
 def is_well_defined(mapping: dict, target: set) -> bool:
     """Return True if every output value is in the target set."""
     # === TODO ===
-    return set(mapping.items()).issubset(target)
+    return set(mapping.values()).issubset(target)
     pass
 print(is_well_defined({1:'a',2:'z'},{'a','b','c'}))
     # === END TODO ===
